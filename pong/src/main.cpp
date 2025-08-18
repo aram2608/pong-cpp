@@ -14,8 +14,11 @@ int main() {
     // Navy blue
     Color BG = Color({0, 38, 70, 255});
 
+    SetTargetFPS(60);
+
     while(!WindowShouldClose()) {
 
+        game.handle_input();
         game.update();
 
         BeginDrawing();

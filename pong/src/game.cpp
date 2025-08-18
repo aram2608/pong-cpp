@@ -17,8 +17,8 @@ void Game::draw() {
 }
 
 void Game::handle_input() {
-    if(IsKeyPressed(KEY_UP)) paddle.move_up();
-    if(IsKeyPressed(KEY_UP)) paddle.move_down();
+    if(IsKeyDown(KEY_UP)) paddle.move_up();
+    if(IsKeyDown(KEY_DOWN)) paddle.move_down();
 }
 
 void Game::update() {

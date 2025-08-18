@@ -13,12 +13,12 @@ void Paddle::draw() {
 }
 
 void Paddle::move_up() {
-    position.y -= 3;
+    position.y -= 1;
 }
 
 void Paddle::move_down() {
-    position.y += 3;
-    if(position.y > GetScreenHeight() - 50) {
-        position.y = position.y > GetScreenHeight() - 50;
-    } 
+    position.y += 1;
+    // if(position.y > GetScreenHeight() - 50) {
+    //     position.y = position.y > GetScreenHeight() - 50;
+    // }
 }
