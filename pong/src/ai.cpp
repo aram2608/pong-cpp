@@ -1,7 +1,7 @@
 #include "ai.hpp"
 
 AI::AI() {
-    position.x = 980;
+    position.x = 960;
     position.y = 300;
 }
 

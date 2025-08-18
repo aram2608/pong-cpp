@@ -7,7 +7,7 @@
                 "/Users/ja1473/dev/tools/vcpkg/installed/arm64-osx/include"
             ],
             "defines": [],
-            "compilerPath": "/opt/homebrew/opt/llvm/bin/clang",
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "macos-clang-arm64"
