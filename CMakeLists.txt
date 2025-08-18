@@ -14,6 +14,7 @@ add_executable(${PROJECT_NAME}
     pong/src/ball.cpp
     pong/src/game.cpp
     pong/src/paddle.cpp
+    pong/src/ai.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/pong/include/)

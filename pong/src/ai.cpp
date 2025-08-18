@@ -1,32 +1,32 @@
-#include "paddle.hpp"
+#include "ai.hpp"
 
-Paddle::Paddle() {
-    position.x = 20;
+AI::AI() {
+    position.x = 980;
     position.y = 300;
 }
 
-Paddle::~Paddle() {
+AI::~AI() {
 }
 
-void Paddle::draw() {
+void AI::draw() {
     DrawRectangle(position.x, position.y, 25, 50, WHITE);
 }
 
-void Paddle::move_up() {
+void AI::move_up() {
     position.y -= 7;
     if (position.y < 0 + 50) {
         position.y = 0 + 50;
     }
 }
 
-void Paddle::move_down() {
+void AI::move_down() {
     position.y += 7;
     if(position.y > 600 - 50) {
         position.y = position.y > 600 - 50;
     }
 }
 
-Rectangle Paddle::get_rect() {
+Rectangle AI::get_rect() {
     return {
         position.x,
         position.y,

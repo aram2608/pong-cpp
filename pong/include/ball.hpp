@@ -12,9 +12,12 @@ class Ball {
         void draw();
 
         // Function to update ball position
-        void update(float spd);
+        void update();
+
+        Rectangle get_rect();
+
+        float speed;
 
     private:
-    Vector2 position;
-    float speed;
+        Vector2 position;
 };

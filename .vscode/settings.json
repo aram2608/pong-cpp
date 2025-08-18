@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "__locale": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "streambuf": "cpp",
+        "typeinfo": "cpp",
+        "bitset": "cpp"
+    }
+}

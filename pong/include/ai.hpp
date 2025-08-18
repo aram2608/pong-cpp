@@ -1,12 +1,10 @@
 #pragma once
 #include <raylib.h>
 
-class Paddle {
+class AI {
     public:
-        // Constructor
-        Paddle();
-        // Deconstructor
-        ~Paddle();
+        AI();
+        ~AI();
         // Function to draw paddl to screen
         void draw();
         void move_up();

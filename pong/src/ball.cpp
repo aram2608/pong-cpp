@@ -5,7 +5,7 @@
 Ball::Ball() {
     position.x = 500;
     position.y = 300;
-    speed = 0.5;
+    speed = 3;
 }
 
 // Deconstructor
@@ -19,6 +19,15 @@ void Ball::draw() {
 }
 
 // Function to update postion of the ball
-void Ball::update(float spd) {
-    position.x += spd;
+void Ball::update() {
+    position.x += speed;
+}
+
+Rectangle Ball::get_rect() {
+    return {
+        position.x,
+        position.y,
+        20.0f,
+        20.0f
+    };
 }
