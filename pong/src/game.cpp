@@ -2,14 +2,13 @@
 
 // Constructor
 Game::Game() {
-    Ball ball;
+    Ball   ball;
     Paddle paddle;
-    AI ai;
+    AI     ai;
 }
 
 // Deconstructor
 Game::~Game() {
-
 }
 
 // Fucntion to draw game events to screen
@@ -24,15 +23,17 @@ void Game::draw_ai() {
 }
 
 void Game::handle_input() {
-    if(IsKeyDown(KEY_UP)) paddle.move_up();
-    if(IsKeyDown(KEY_DOWN)) paddle.move_down();
+    if (IsKeyDown(KEY_UP))
+        paddle.move_up();
+    if (IsKeyDown(KEY_DOWN))
+        paddle.move_down();
 }
 
 void Game::check_collision() {
-    if(CheckCollisionRecs(ball.get_rect(), paddle.get_rect())) {
+    if (CheckCollisionRecs(ball.get_rect(), paddle.get_rect())) {
         ball.speed = 5;
     }
-    if(CheckCollisionRecs(ball.get_rect(), ai.get_rect())) {
+    if (CheckCollisionRecs(ball.get_rect(), ai.get_rect())) {
         ball.speed = -5;
     }
 }

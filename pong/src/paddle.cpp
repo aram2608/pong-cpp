@@ -21,16 +21,11 @@ void Paddle::move_up() {
 
 void Paddle::move_down() {
     position.y += 7;
-    if(position.y > 800 - 120) {
+    if (position.y > 800 - 120) {
         position.y = 800 - 120;
     }
 }
 
 Rectangle Paddle::get_rect() {
-    return {
-        position.x,
-        position.y,
-        25.0f,
-        120.0f
-    };
+    return {position.x, position.y, 25.0f, 120.0f};
 }

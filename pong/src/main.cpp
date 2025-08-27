@@ -1,6 +1,7 @@
+#include "game.hpp"
+
 #include <iostream>
 #include <raylib.h>
-#include "game.hpp"
 
 int main() {
     // Hard coded screen size
@@ -21,16 +22,16 @@ int main() {
     Color BG = Color({0, 38, 70, 255});
 
     // Game loop remains on while X is not hit or escape key pressed
-    while(!WindowShouldClose()) {
+    while (!WindowShouldClose()) {
 
         game.handle_input();
         game.update();
 
         BeginDrawing();
-            ClearBackground(BG);
-            DrawLineEx({ mid_x, 0 }, { mid_x, (float)screen_h }, 2.0f, WHITE);
+        ClearBackground(BG);
+        DrawLineEx({mid_x, 0}, {mid_x, (float) screen_h}, 2.0f, WHITE);
 
-            game.draw();
+        game.draw();
         EndDrawing();
     }
     CloseWindow();
