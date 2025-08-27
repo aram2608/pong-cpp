@@ -16,11 +16,11 @@ class Ball {
 
     Rectangle get_rect();
 
-    int   speed_x;
-    int   speed_y;
+    float   speed_x;
+    float   speed_y;
     float radius;
     float diameter;
+    Vector2 position;
 
   private:
-    Vector2 position;
 };

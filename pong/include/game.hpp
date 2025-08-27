@@ -1,5 +1,4 @@
 #pragma once
-#include "ai.hpp"
 #include "ball.hpp"
 #include "paddle.hpp"
 
@@ -19,6 +18,6 @@ class Game {
 
   private:
     Ball   ball;
-    Paddle paddle;
-    AI     ai;
+    Paddle player;
+    Paddle     ai;
 };

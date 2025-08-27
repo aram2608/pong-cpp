@@ -1,10 +1,11 @@
 #include "game.hpp"
+#include <cmath>
 
 // Constructor
 Game::Game() {
     Ball   ball;
-    Paddle paddle;
-    AI     ai;
+    Paddle player;
+    Paddle     ai;
 }
 
 // Deconstructor
@@ -13,7 +14,7 @@ Game::~Game() {
 
 // Function to draw game events to screen
 void Game::draw() {
-    paddle.draw();
+    player.draw();
     ball.draw();
     ai.draw();
 }
@@ -21,23 +22,21 @@ void Game::draw() {
 // Function to handle game IO
 void Game::handle_input() {
     if (IsKeyDown(KEY_UP)) {
-        paddle.move_up();
+        player.move_up();
     }
     if (IsKeyDown(KEY_DOWN)) {
-        paddle.move_down();
+        player.move_down();
     }
 }
 
 // Function to check collisions events
 void Game::check_collision() {
-    if (CheckCollisionRecs(paddle.get_rect(), ball.get_rect())) {
-        ball.speed_x *= 1;
-        ball.speed_y *= 1;
+    if (CheckCollisionRecs(player.get_rect(), ball.get_rect()) && ball.speed_x < 0) {
+        ball.speed_x = -ball.speed_x;
     }
 
-    if (CheckCollisionRecs(ai.get_rect(), ball.get_rect())) {
-        ball.speed_x *= -1;
-        ball.speed_y *= -1;
+    if (CheckCollisionRecs(ai.get_rect(), ball.get_rect()) && ball.speed_x > 0) {
+        ball.speed_x = -ball.speed_x;
     }
 }
 
