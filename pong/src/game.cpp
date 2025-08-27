@@ -30,10 +30,10 @@ void Game::handle_input() {
 
 void Game::check_collision() {
     if(CheckCollisionRecs(ball.get_rect(), paddle.get_rect())) {
-        ball.speed = 2;
+        ball.speed = 5;
     }
     if(CheckCollisionRecs(ball.get_rect(), ai.get_rect())) {
-        ball.speed = -2;
+        ball.speed = -5;
     }
 }
 
