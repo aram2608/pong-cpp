@@ -24,9 +24,11 @@ int main() {
     // Game loop remains on while X is not hit or escape key pressed
     while (!WindowShouldClose()) {
 
+        // Handle game IO/events
         game.handle_input();
         game.update();
 
+        // Drawing functions
         BeginDrawing();
         ClearBackground(BG);
         DrawLineEx({mid_x, 0}, {mid_x, (float) screen_h}, 2.0f, WHITE);

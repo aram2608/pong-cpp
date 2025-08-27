@@ -11,17 +11,14 @@ Game::Game() {
 Game::~Game() {
 }
 
-// Fucntion to draw game events to screen
+// Function to draw game events to screen
 void Game::draw() {
     paddle.draw();
     ball.draw();
     ai.draw();
 }
 
-void Game::draw_ai() {
-    ai.draw();
-}
-
+// Function to handle game IO
 void Game::handle_input() {
     if (IsKeyDown(KEY_UP))
         paddle.move_up();
@@ -29,6 +26,7 @@ void Game::handle_input() {
         paddle.move_down();
 }
 
+// Function to check collisions events
 void Game::check_collision() {
     if (CheckCollisionRecs(ball.get_rect(), paddle.get_rect())) {
         ball.speed = 5;
@@ -38,11 +36,8 @@ void Game::check_collision() {
     }
 }
 
+// Function to update game events
 void Game::update() {
     check_collision();
-    move_ball();
-}
-
-void Game::move_ball() {
     ball.update();
 }
