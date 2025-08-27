@@ -2,11 +2,12 @@
 
 // Constructor
 Ball::Ball() {
-    position.x = 1280 / 2;
-    position.y = 800 / 2;
+    position.x = GetScreenWidth() / 2;
+    position.y = GetScreenHeight() / 2;
     speed_x      = 7;
     speed_y      = 7;
     radius       = 20;
+    diameter = 40;
 }
 
 // Deconstructor
@@ -34,5 +35,5 @@ void Ball::update() {
 
 // Function to return ball rectangle for collision detection
 Rectangle Ball::get_rect() {
-    return {position.x, position.y, radius * 2.0f, radius * 2.0f};
+    return {position.x, position.y, diameter, diameter};
 }

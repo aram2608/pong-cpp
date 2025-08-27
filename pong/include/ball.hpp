@@ -18,7 +18,8 @@ class Ball {
 
     int speed_x;
     int speed_y;
-    int radius;
+    float radius;
+    float diameter;
 
   private:
     Vector2 position;

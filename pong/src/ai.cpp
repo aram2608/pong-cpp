@@ -2,8 +2,8 @@
 
 // Constructor
 AI::AI() {
-    position.x = 1280 - 35;
-    position.y = 800 / 2 - 60;
+    position.x = GetScreenWidth() - 35;
+    position.y = GetScreenHeight() / 2 - 60;
 }
 
 // Deconstructor
