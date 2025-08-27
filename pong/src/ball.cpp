@@ -5,7 +5,7 @@
 Ball::Ball() {
     position.x = 500;
     position.y = 300;
-    speed = 3;
+    speed = 2;
 }
 
 // Deconstructor

@@ -22,7 +22,7 @@ void Paddle::move_up() {
 void Paddle::move_down() {
     position.y += 7;
     if(position.y > 600 - 50) {
-        position.y = position.y > 600 - 50;
+        position.y = 600 - 50;
     }
 }
 
