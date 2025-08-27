@@ -50,4 +50,5 @@ void Game::update() {
     check_collision();
     ball.update();
     player.update();
+    ai.update();
 }

@@ -14,14 +14,18 @@ class Paddle {
     // Template method for paddle movement
     virtual void update() = 0;
 
+    // Function to get rectangle for collisions events
     Rectangle get_rect();
 
   protected:
-    Vector2 position;
+    // Function to fix paddles to screen
     void clamp_to_screen();
+    // Function to handle upwards movement
     void move_up();
+    // Function to handle downwards movement
     void move_down();
 
+    Vector2 position;
     float height;
     float width;
     int   speed;
