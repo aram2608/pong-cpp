@@ -16,7 +16,9 @@ class Ball {
 
     Rectangle get_rect();
 
-    float speed;
+    int speed_x;
+    int speed_y;
+    int radius;
 
   private:
     Vector2 position;
