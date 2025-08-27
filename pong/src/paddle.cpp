@@ -16,20 +16,25 @@ void Paddle::draw() {
 // Function to move player paddle up
 void Paddle::move_up() {
     position.y -= speed;
-    if (position.y < 0) {
-        position.y = 0;
-    }
 }
 
 // Function to move player paddle down
 void Paddle::move_down() {
     position.y += speed;
-    if (position.y > GetScreenHeight() - height) {
-        position.y = GetScreenHeight() - height;
-    }
 }
+
 
 // Function to get rectangle for collision handling
 Rectangle Paddle::get_rect() {
     return {position.x, position.y, width, height};
+}
+
+// Function to fix paddle position to screen
+void Paddle::clamp_to_screen() {
+    if (position.y < 0) {
+        position.y = 0;
+    }
+    if (position.y > GetScreenHeight() - height) {
+        position.y = GetScreenHeight() - height;
+    }
 }

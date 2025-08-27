@@ -34,16 +34,6 @@ void Game::draw() {
     ai.draw();
 }
 
-// Function to handle game IO
-void Game::handle_input() {
-    if (IsKeyDown(KEY_UP)) {
-        player.move_up();
-    }
-    if (IsKeyDown(KEY_DOWN)) {
-        player.move_down();
-    }
-}
-
 // Function to check collisions events
 void Game::check_collision() {
     if (CheckCollisionRecs(player.get_rect(), ball.get_rect()) && ball.speed_x < 0) {
@@ -59,4 +49,5 @@ void Game::check_collision() {
 void Game::update() {
     check_collision();
     ball.update();
+    player.update();
 }

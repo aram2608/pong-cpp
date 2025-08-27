@@ -26,7 +26,6 @@ int main() {
 
         // Handle game IO/events
         game.update();
-        game.handle_input();
 
         // Drawing functions
         BeginDrawing();

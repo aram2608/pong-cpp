@@ -10,13 +10,17 @@ class Paddle {
     virtual ~Paddle();
     // Function to draw paddl to screen
     void draw();
-    void move_up();
-    void move_down();
+
+    // Template method for paddle movement
+    virtual void update() = 0;
 
     Rectangle get_rect();
 
-  private:
+  protected:
     Vector2 position;
+    void clamp_to_screen();
+    void move_up();
+    void move_down();
 
     float height;
     float width;

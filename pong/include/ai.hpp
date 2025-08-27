@@ -5,6 +5,7 @@
 class AI : public Paddle {
   public:
     using Paddle::Paddle;
+    void update() override;
 
   private:
     float target_y = 0.0f;
