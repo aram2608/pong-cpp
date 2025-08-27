@@ -6,6 +6,7 @@ Paddle::Paddle() {
     position.y = GetScreenHeight() / 2 - 60;
     height = 120;
     width = 25;
+    speed = 6;
 }
 
 // Deconstructor
@@ -19,7 +20,7 @@ void Paddle::draw() {
 
 // Function to move player paddle up
 void Paddle::move_up() {
-    position.y -= 7;
+    position.y -= speed;
     if (position.y < 0) {
         position.y = 0;
     }
@@ -27,7 +28,7 @@ void Paddle::move_up() {
 
 // Function to move player paddle down
 void Paddle::move_down() {
-    position.y += 7;
+    position.y += speed;
     if (position.y > GetScreenHeight() - height) {
         position.y = GetScreenHeight() - height;
     }

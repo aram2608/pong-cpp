@@ -19,4 +19,6 @@ class Paddle {
 
     float height;
     float width;
+
+    int speed;
 };

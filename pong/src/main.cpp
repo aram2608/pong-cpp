@@ -25,8 +25,8 @@ int main() {
     while (!WindowShouldClose()) {
 
         // Handle game IO/events
-        game.handle_input();
         game.update();
+        game.handle_input();
 
         // Drawing functions
         BeginDrawing();

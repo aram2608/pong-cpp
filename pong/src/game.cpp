@@ -20,10 +20,12 @@ void Game::draw() {
 
 // Function to handle game IO
 void Game::handle_input() {
-    if (IsKeyDown(KEY_UP))
+    if (IsKeyDown(KEY_UP)) {
         paddle.move_up();
-    if (IsKeyDown(KEY_DOWN))
+    }
+    if (IsKeyDown(KEY_DOWN)) {
         paddle.move_down();
+    }
 }
 
 // Function to check collisions events
