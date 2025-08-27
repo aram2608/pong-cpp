@@ -1,17 +1,12 @@
 #include "paddle.hpp"
 
 // Constructor
-Paddle::Paddle() {
-    position.x = 10;
-    position.y = GetScreenHeight() / 2 - 60;
-    height     = 120;
-    width      = 25;
-    speed      = 6;
+Paddle::Paddle(Vector2 pos, float w, float h, int s)
+    : position(pos), width(w), height(h), speed(s) {
 }
 
 // Deconstructor
-Paddle::~Paddle() {
-}
+Paddle::~Paddle() = default;
 
 // Function to draw paddle to screen
 void Paddle::draw() {

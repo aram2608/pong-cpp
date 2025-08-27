@@ -18,8 +18,8 @@ class Ball {
 
     float   speed_x;
     float   speed_y;
-    float radius;
-    float diameter;
+    float   radius;
+    float   diameter;
     Vector2 position;
 
   private:

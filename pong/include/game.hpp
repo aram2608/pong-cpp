@@ -1,6 +1,7 @@
 #pragma once
+#include "ai.hpp"
 #include "ball.hpp"
-#include "paddle.hpp"
+#include "player.hpp"
 
 #include <raylib.h>
 
@@ -18,6 +19,6 @@ class Game {
 
   private:
     Ball   ball;
-    Paddle player;
-    Paddle     ai;
+    Player player;
+    AI     ai;
 };
