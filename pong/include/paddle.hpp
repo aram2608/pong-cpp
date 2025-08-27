@@ -16,4 +16,7 @@ class Paddle {
 
   private:
     Vector2 position;
+
+    float height;
+    float width;
 };

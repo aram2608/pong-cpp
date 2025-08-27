@@ -29,10 +29,11 @@ void Game::handle_input() {
 // Function to check collisions events
 void Game::check_collision() {
     if (CheckCollisionRecs(ball.get_rect(), paddle.get_rect())) {
-        ball.speed_x = 7;
+        ball.speed_x *= 1;
     }
+
     if (CheckCollisionRecs(ball.get_rect(), ai.get_rect())) {
-        ball.speed_x = -7;
+        ball.speed_x *= -1;
     }
 }
 

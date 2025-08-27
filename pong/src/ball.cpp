@@ -21,6 +21,15 @@ void Ball::draw() {
 // Function to update postion of the ball
 void Ball::update() {
     position.x += speed_x;
+    position.y += speed_y;
+
+    if(position.y + radius >= GetScreenHeight() || position.y - radius <= 0) {
+        speed_y *= -1;
+    }
+
+    if(position.x + radius >= GetScreenWidth() || position.x - radius <= 0) {
+        speed_x *= -1;
+    }
 }
 
 // Function to return ball rectangle for collision detection
