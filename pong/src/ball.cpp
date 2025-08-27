@@ -4,10 +4,10 @@
 Ball::Ball() {
     position.x = GetScreenWidth() / 2;
     position.y = GetScreenHeight() / 2;
-    speed_x      = 7;
-    speed_y      = 7;
-    radius       = 20;
-    diameter = 40;
+    speed_x    = 7;
+    speed_y    = 7;
+    radius     = 20;
+    diameter   = 40;
 }
 
 // Deconstructor
@@ -24,11 +24,11 @@ void Ball::update() {
     position.x += speed_x;
     position.y += speed_y;
 
-    if(position.y + radius >= GetScreenHeight() || position.y - radius <= 0) {
+    if (position.y + radius >= GetScreenHeight() || position.y - radius <= 0) {
         speed_y *= -1;
     }
 
-    if(position.x + radius >= GetScreenWidth() || position.x - radius <= 0) {
+    if (position.x + radius >= GetScreenWidth() || position.x - radius <= 0) {
         speed_x *= -1;
     }
 }

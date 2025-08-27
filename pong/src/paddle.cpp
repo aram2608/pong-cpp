@@ -4,9 +4,9 @@
 Paddle::Paddle() {
     position.x = 10;
     position.y = GetScreenHeight() / 2 - 60;
-    height = 120;
-    width = 25;
-    speed = 6;
+    height     = 120;
+    width      = 25;
+    speed      = 6;
 }
 
 // Deconstructor

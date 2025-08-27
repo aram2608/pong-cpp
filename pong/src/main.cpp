@@ -30,7 +30,7 @@ int main() {
 
         // Drawing functions
         BeginDrawing();
-        
+
         // Draws a clear background to flush out trailing drawings
         ClearBackground(BG);
 

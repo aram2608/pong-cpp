@@ -16,8 +16,8 @@ class Ball {
 
     Rectangle get_rect();
 
-    int speed_x;
-    int speed_y;
+    int   speed_x;
+    int   speed_y;
     float radius;
     float diameter;
 
