@@ -2,9 +2,9 @@
 
 - [x] Make board/window
 - [x] Draw ball
-- [] Have ball move
-- [] Create paddle
-- [] Create ai paddle
+- [x] Have ball move
+- [x] Create paddle
+- [x] Create ai paddle
 - [] Collision detection
 - [] Physics to change ball direction
 - [] Scoring

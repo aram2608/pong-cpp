@@ -1,15 +1,15 @@
 #include "paddle.hpp"
 
 Paddle::Paddle() {
-    position.x = 20;
-    position.y = 300;
+    position.x = 0;
+    position.y = 800 / 2 - 60;
 }
 
 Paddle::~Paddle() {
 }
 
 void Paddle::draw() {
-    DrawRectangle(position.x, position.y, 25, 50, WHITE);
+    DrawRectangle(position.x, position.y, 25, 120, WHITE);
 }
 
 void Paddle::move_up() {
@@ -31,6 +31,6 @@ Rectangle Paddle::get_rect() {
         position.x,
         position.y,
         25.0f,
-        50.0f
+        120.0f
     };
 }
