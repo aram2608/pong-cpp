@@ -8,11 +8,17 @@ class Ball {
     // Deconstructor
     ~Ball();
 
+    // Function to init the speed of the ball randomly
+    void set_speed();
+
     // Function to draw the ball to the screen
     void draw();
 
     // Function to update ball position
     void update();
+
+    // Function to reset ball back to center
+    void reset();
 
     // Function to track the center of the ball
     float track_center();

@@ -16,6 +16,11 @@ class Game {
 
     void check_collision();
 
+    void register_score();
+
+    int player_score;
+    int ai_score;
+
   private:
     Ball   ball;
     Player player;

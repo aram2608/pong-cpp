@@ -1,6 +1,7 @@
 #include "game.hpp"
 
 #include <cmath>
+#include <iostream>
 
 // Constructor - initializer list since player and AI take arguments
 // We do not need to add ball here since by default the compiler constructs one
@@ -8,6 +9,8 @@
 Game::Game()
     : player(Vector2{10.0f, (GetScreenHeight() / 2.0f - 60.0f)}, 25.0f, 120.0f, 6),
       ai(Vector2{(GetScreenWidth() - 35.0f), (GetScreenHeight() / 2.0f - 60.0f)}, 25.0f, 120.0f, 6) {
+    player_score = 0;
+    ai_score = 0;
 }
 
 // Deconstructor
@@ -32,8 +35,22 @@ void Game::check_collision() {
     }
 }
 
+// Function to track scores
+void Game::register_score() {
+    if (ball.position.x + ball.radius >= GetScreenWidth()) {
+        player_score ++;
+        ball.reset();
+    }
+
+    if (ball.position.x - ball.radius <= 0) {
+        ai_score ++;
+        ball.reset();
+    }
+}
+
 // Function to update game events
 void Game::update() {
+    register_score();
     check_collision();
     ball.update();
     player.update();
