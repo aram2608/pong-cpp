@@ -2,24 +2,11 @@
 
 #include <cmath>
 
-// // Constructor
-// Game::Game() {
-//     Ball   ball;
-//     Player player(
-//         Vector2{10.0f, (GetScreenHeight() - 60.0f / 2.0f)},
-//         25.0f, 120.0f,
-//         6
-// );
-//     AI ai(
-//         Vector2{10.0f, (GetScreenHeight() - 60.0f / 2.0f)},
-//         25.0f, 120.0f,
-//         6
-// );
-// }
-
-// Constructor
+// Constructor - initializer list since player and AI take arguments
+// We do not need to add ball here since by default the compiler constructs one
+// since we declared it in out hpp file
 Game::Game()
-    : ball(), player(Vector2{10.0f, (GetScreenHeight() / 2.0f - 60.0f)}, 25.0f, 120.0f, 6),
+    : player(Vector2{10.0f, (GetScreenHeight() / 2.0f - 60.0f)}, 25.0f, 120.0f, 6),
       ai(Vector2{(GetScreenWidth() - 35.0f), (GetScreenHeight() / 2.0f - 60.0f)}, 25.0f, 120.0f, 6) {
 }
 

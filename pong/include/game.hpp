@@ -13,7 +13,6 @@ class Game {
     ~Game();
     void update();
     void draw();
-    void handle_input();
 
     void check_collision();
 
