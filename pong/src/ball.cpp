@@ -23,6 +23,7 @@ void Ball::draw() {
 void Ball::update() {
     position.x += speed_x;
     position.y += speed_y;
+    center = track_center();
 
     if (position.y + radius >= GetScreenHeight() || position.y - radius <= 0) {
         speed_y *= -1;
@@ -31,6 +32,12 @@ void Ball::update() {
     if (position.x + radius >= GetScreenWidth() || position.x - radius <= 0) {
         speed_x *= -1;
     }
+}
+
+// Function to track the center of the ball
+float Ball::track_center() {
+    float c = position.y;
+    return c;
 }
 
 // Function to return ball rectangle for collision detection

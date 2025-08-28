@@ -38,4 +38,5 @@ void Game::update() {
     ball.update();
     player.update();
     ai.update();
+    ai.set_target_y(ball.center);
 }

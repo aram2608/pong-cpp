@@ -14,12 +14,16 @@ class Ball {
     // Function to update ball position
     void update();
 
+    // Function to track the center of the ball
+    float track_center();
+
     Rectangle get_rect();
 
     float   speed_x;
     float   speed_y;
     float   radius;
     float   diameter;
+    float center;
     Vector2 position;
 
   private:
